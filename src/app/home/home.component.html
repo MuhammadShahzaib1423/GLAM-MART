@@ -1,0 +1,325 @@
+<hr style="border: 1px solid grey" />
+<div class="container2">
+  <div class="textspace">
+    <button class="btn4" (click)="shopNow()">Shop Now</button>
+  </div>
+</div>
+<section id="categories-section" class="my-5">
+  <div class="container">
+    <div class="main_categories text-center">
+      <h1>Categories</h1>
+      <div
+        class="categories-container d-flex flex-wrap justify-content-center gap-4"
+      >
+        <div class="category-item text-center">
+          <div class="category-box">
+            <img
+              src="../../assets/glasses1.jpg"
+              alt="Glasses"
+              class="category-image"
+              (click)="filterProducts('Sunglasses')"
+            />
+          </div>
+          <p class="category-text">Glasses</p>
+        </div>
+
+        <div class="category-item text-center">
+          <div class="category-box">
+            <img
+              src="../../assets/category2.jpg"
+              alt="Jackets"
+              class="category-image"
+              (click)="filterProducts('Jackets')"
+            />
+          </div>
+          <p class="category-text">Jackets</p>
+        </div>
+
+        <div class="category-item text-center">
+          <div class="category-box">
+            <img
+              src="../../assets/category1.jpg"
+              alt="Shirts"
+              class="category-image"
+              (click)="filterProducts('Shirts')"
+            />
+          </div>
+          <p class="category-text">Shirts</p>
+        </div>
+
+        <div class="category-item text-center">
+          <div class="category-box">
+            <img
+              src="../../assets/category3.jpg"
+              alt="Shoes"
+              class="category-image"
+              (click)="filterProducts('Shoes')"
+            />
+          </div>
+          <p class="category-text">Shoes</p>
+        </div>
+
+        <div class="category-item text-center">
+          <div class="category-box">
+            <img
+              src="../../assets/wallets.jpg"
+              alt="Wallets"
+              class="category-image"
+              (click)="filterProducts('Wallets')"
+            />
+          </div>
+          <p class="category-text">Wallets</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="new-arrival" class="section new-arrival my-5">
+  <div class="container">
+    <div class="title text-center">
+      <h1>Featured</h1>
+      <p>All the latest picked from designers of our store</p>
+    </div>
+
+    <div class="row d-flex flex-wrap">
+      <div
+        class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch mb-3"
+        *ngFor="let product of filteredProducts"
+      >
+        <div class="card" style="width: 100%; height: 99%">
+          <div class="dataimage position-relative">
+            <img
+              [src]="product.image"
+              class="card-img-top img-fluid"
+              alt="{{ product.name }}"
+              (click)="viewProduct(product)"
+              style="cursor: pointer; object-fit: cover; height: 200px"
+            />
+            <div
+              class="text-block position-absolute"
+              style="font-size: 14px; padding: 2px 5px"
+            >
+              <p id="discnt">{{ product.discount }} % OFF</p>
+            </div>
+          </div>
+          <div class="card-body d-flex flex-column p-2" style="font-size: 14px">
+            <h5 class="card-title" style="font-size: 16px">
+              {{ product.name }}
+            </h5>
+            <div class="price">
+              <p style="font-size: 16px; font-weight: bold; margin-bottom: 0">
+                Rs
+                {{ product.price - (product.price * product.discount) / 100 }}
+              </p>
+              <del style="color: #464545; font-size: 14px">{{
+                product.price
+              }}</del>
+            </div>
+            <p class="text-muted" style="font-size: 16px; margin-right: 10px">
+              {{ product.brand }}
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span> {{ product.rating }}
+            </p>
+
+            <button
+              class="btn btn-primary"
+              style="font-size: 14px; padding: 5px 10px"
+              (click)="viewProduct(product)"
+            >
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="best-selling">
+  <div class="container">
+    <div class="title text-center">
+      <h1>Best Selling</h1>
+      <p>Our best selling products</p>
+    </div>
+
+    <div class="row d-flex flex-wrap">
+      <div
+        class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch mb-4"
+        *ngFor="let product of bestSellers"
+      >
+        <div class="card" style="width: 100%; height: 92%">
+          <div class="dataimage position-relative">
+            <img
+              [src]="product.image"
+              class="card-img-top img-fluid"
+              alt="{{ product.name }}"
+              (click)="viewProduct(product)"
+              style="cursor: pointer; object-fit: cover"
+            />
+            <div class="text-block position-absolute" id="discnt">
+              <p>{{ product.discount }} % OFF</p>
+            </div>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+
+            <div class="price">
+              <p style="font-size: 16px; font-weight: bold">
+                Rs
+                {{ product.price - (product.price * product.discount) / 100 }}
+              </p>
+              <del style="color: #555353; font-size: 16px">
+                Rs {{ product.price }}
+              </del>
+            </div>
+
+            <p style="font-size: 16px; color: #5e5d5d">
+              {{ product.brand }}
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span> {{ product.rating }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="charity my-5">
+  <div class="container">
+    <h1 class="text-center mb-4">Charity</h1>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img
+          src="../../assets/handimage.jpg"
+          alt="Charity"
+          class="img-fluid rounded"
+          style="border-radius: 10px"
+        />
+      </div>
+      <div class="col-md-6">
+        <p class="text-muted">
+          We are committed to giving back to the community. We donate 10% of our
+          profits to charity. We believe in making the world a better place for
+          everyone.
+        </p>
+        <button class="btn btn-primary" (click)="donate()">Donate Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closestcalled">
+  <div class="text-overlay">
+    <h1>Your Closest Called</h1>
+    <p>IT TOLD ME YOU NEEDED NEW SHIRTS</p>
+    <button class="btn5" (click)="shopNow()">Shop Now</button>
+  </div>
+</section>
+<section class="customer-reviews my-5">
+  <div class="container">
+    <div class="title text-center mb-4">
+      <h1>Customer Reviews</h1>
+      <p>What our customers say about us</p>
+    </div>
+    <div class="row d-flex flex-wrap">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card shadow-sm border-light">
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quod, voluptates, quae, quos quidem quia quibusdam dolorum
+              voluptatum nemo doloremque.
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                src="../../assets/about1.jpg"
+                alt="Person 1"
+                class="img-fluid rounded-circle"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ms-3">
+                <h5 class="card-title">John Doe</h5>
+                <p class="card-text">CEO, XYZ Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card shadow-sm border-light">
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quod, voluptates, quae, quos quidem quia quibusdam dolorum
+              voluptatum nemo doloremque.
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                src="../../assets/about2.jpg"
+                alt="Person 2"
+                class="img-fluid rounded-circle"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ms-3">
+                <h5 class="card-title">Jane Doe</h5>
+                <p class="card-text">CEO, ABC Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card shadow-sm border-light">
+          <div class="card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quod, voluptates, quae, quos quidem quia quibusdam dolorum
+              voluptatum nemo doloremque.
+            </p>
+            <div class="d-flex align-items-center">
+              <img
+                src="../../assets/about3.jpg"
+                alt="Person 3"
+                class="img-fluid rounded-circle"
+                style="width: 50px; height: 50px"
+              />
+              <div class="ms-3">
+                <h5 class="card-title">John Smith</h5>
+                <p class="card-text">CEO, PQR Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section benefits">
+  <h1 style="margin-bottom: 30px; margin-top: 50px">Our Promises</h1>
+  <div class="benefit-center box">
+    <div class="benefits">
+      <span class="icon"> <fa-icon [icon]="fashippingFast"></fa-icon> </span>
+      <h4>Free Shopping</h4>
+      <span class="text">Free Shipping on Order Above Rs 1000</span>
+    </div>
+    <div class="benefits">
+      <span class="icon"> <fa-icon [icon]="fabookReader"></fa-icon> </span>
+      <h4>10-Days Return Policy</h4>
+      <span class="text">Shop without any fear</span>
+    </div>
+
+    <div class="benefits">
+      <span class="icon">
+        <fa-icon [icon]="faheadphones"></fa-icon>
+      </span>
+      <h4>24/7 Support</h4>
+      <span class="text">We are always here to help you</span>
+    </div>
+  </div>
+</section>

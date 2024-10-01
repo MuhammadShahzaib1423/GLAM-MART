@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="headings">
+    <h1>Shopping Cart</h1>
+  </div>
+
+  <div class="card shadow-lg mb-5 p-4">
+    <div class="table-responsive">
+      <table class="table table-hover text-center align-middle">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Remove</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody class="bg-light">
+          <tr *ngFor="let item of cartItems; let i = index" class="shadow-sm">
+            <td style="height: 100px; width: 100px">
+              <img
+                [src]="item.image"
+                alt="{{ item.name }} Image"
+                class="img-fluid"
+              />
+            </td>
+            <td>
+              <div class="product-title font-weight-bold">{{ item.name }}</div>
+              <p class="product-description text-muted">
+                Product description here
+              </p>
+            </td>
+            <td class="text-success font-weight-bold">Rs {{ item.price }}</td>
+            <td>
+              <input
+                type="number"
+                class="form-control text-center no-border"
+                [(ngModel)]="item.quantity"
+                min="1"
+              />
+            </td>
+            <td>
+              <fa-icon
+                [icon]="fatrash"
+                (click)="removeFromCart(i)"
+                style="cursor: pointer"
+                id="trashicon"
+              ></fa-icon>
+            </td>
+            <td class="text-success font-weight-bold">
+              Rs {{ item.price * item.quantity }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card shadow-lg p-4 mb-5">
+    <div class="totals bg-light p-4 rounded">
+      <div class="d-flex justify-content-between mb-2">
+        <span style="font-size: 18px; font-weight: bold">Subtotal</span>
+        <span id="cart-subtotal" class="font-weight-bold"
+          >Rs {{ totals?.subtotal }}</span
+        >
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between mb-2">
+        <span style="font-size: 18px; font-weight: bold">Tax (5%)</span>
+        <span id="cart-tax" class="font-weight-bold">Rs {{ totals?.tax }}</span>
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between mb-2">
+        <span style="font-size: 18px; font-weight: bold">Shipping</span>
+        <span id="cart-shipping" class="font-weight-bold"
+          >Rs {{ totals?.shipping }}</span
+        >
+      </div>
+      <hr />
+      <div class="d-flex justify-content-between text-primary font-weight-bold">
+        <span style="font-size: 18px; font-weight: bold">Grand Total</span>
+        <span id="cart-total">Rs {{ totals?.total }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mb-5">
+    <button
+      class="btn btn-primary btn-lg btn-block shadow-lg"
+      (click)="oncheckout()"
+    >
+      <i class="fas fa-credit-card"></i> Proceed to Checkout
+    </button>
+  </div>
+</div>

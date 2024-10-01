@@ -1,0 +1,378 @@
+.btn5:hover {
+    background-color:#7EACB5 !important;
+    color: white ;
+  }
+  .container2{
+    position: relative; 
+  background-image: url('../../assets/banner2.png'); 
+  background-size: max-width;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 97vh; 
+  width: 100%; 
+  
+
+  margin-bottom: 120px;
+  }
+  .btn4{
+    position: absolute; 
+  top: 70%; 
+  left: 15%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+  border: none;
+  width: 200px;
+  border-radius: 8px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  
+  }
+  .btn4:hover{
+    background-color: #7EACB5;
+    color: white;
+   
+    
+  }
+  .text-block {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    color: green;
+    padding-left: 10px;
+    padding-right: 8px;
+    height: 26px;
+  }
+  .star{
+    color: #ff6600;
+    font-size: 20px;
+  }
+  .price{
+    display: flex;
+    gap: 20px;
+  }
+
+.section {
+    padding: 2rem 0;
+    background-color: #f5f5f5;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .title p {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  .product-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .product-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(25% - 2rem); 
+    max-width: calc(25% - 2rem);
+    display: flex;
+    flex-direction: column;
+    height: 530px;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .overlay {
+    position: relative;
+  }
+  
+  .product-thumb img {
+    width: 100%;
+    display: block;
+  }
+  
+  .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .product-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .product-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-info a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .product-info h4 {
+    color: #ff6600;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #f1f1f1;
+    padding: 0.5rem 0;
+    background-color: #fafafa;
+  }
+  #second_line{
+    margin-top: 30px;
+  }
+  .icons li {
+    cursor: pointer;
+  }
+  
+  .icons i {
+    font-size: 1.5rem;
+    color: #888;
+  }
+  
+  .icons i:hover {
+    color: #ff6600;
+  }
+ .card-img-top{
+  height: 160px;
+  object-fit: cover;
+ }
+ .benefit-center{
+  display:flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:30px;
+ }
+ .benefits{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  border: 1px solid #ccc;
+  padding:16px 16px 16px 16px;
+  margin-bottom: 50px;
+ }
+ .benefits .icon{
+  color:#ff4321;
+  font-size:34px;
+ }
+ .benefits h4{
+  margin-bottom: 5px;
+ }
+ .benefits .text{
+  font-size: 18px;
+  color: #777;
+ }
+ .charity {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.charity h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.charity p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.customer-reviews {
+  background-color: #fbf8f8;
+  padding: 40px 0;
+}
+
+.customer-reviews .card {
+  transition: transform 0.4s;
+}
+
+.customer-reviews .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 20px 20px  rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.customer-reviews .card-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+.customer-reviews .title h1 {
+  color: #333;
+}
+
+.customer-reviews .title p {
+  color: #666;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row3{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  height: 100%;
+}
+.img_div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.closestcalled {
+  position: relative; 
+  background-image: url('../../assets/man3.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
+  width: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  margin-bottom: 120px;
+}
+.text-overlay{
+  position: absolute; 
+  top: 60%; 
+  left: 20%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+}
+.text-overlay h1{
+  font-size: 3rem; 
+ font-weight: bold;  
+}
+.text-overlay p{
+  font-size: 1.5rem; 
+  margin-bottom: 20px;
+  
+}
+.btn5{
+  background-color: #139aee;
+  color: white;
+  padding: 8px ;
+
+  border-radius: 20px;
+  font-size: 1.2rem;
+  margin-right: 250px;
+  cursor: pointer;
+  width: 160px;
+  border: none;
+  
+}
+.btn5:hover{
+  background-color: green;
+}
+
+#discnt{
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 25px;
+}
+#categories-section {
+  margin-top: 40px;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover .category-image {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.category-text {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+@media(max-width:670px){
+
+  .container2 {
+    
+    padding: 20px; 
+    width: 50%;
+  }
+  
+
+  .btn4 {
+    width: 80%; 
+    height: 45px; 
+    font-size: 18px; 
+    position: static; 
+    margin: auto; 
+  }
+}

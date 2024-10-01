@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <form
+      class="signup"
+      [formGroup]="signupreactiveForm"
+      (ngSubmit)="onsubmit()"
+    >
+      <h1>Sign up to Create your Account</h1>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Your Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="password"
+          id="password"
+          placeholder="Enter your password here"
+          formControlName="password"
+          minlength="8"
+        />
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label for="checkbox" class="newcheck">
+          I agree to the <a href="">Terms & Conditions</a>
+        </label>
+      </div>
+      <div class="form-group">
+        <button class="btn" type="submit">Signup</button>
+      </div>
+      <p id="signuplink">
+        Already have an account <a class="abc" routerLink="/login">Sign In</a>
+      </p>
+    </form>
+  </div>
+  <div class="images">
+    <img src="../../assets/signup.png" alt="Image" />
+  </div>
+</div>

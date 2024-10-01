@@ -1,0 +1,65 @@
+.headings{
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+          
+  text-align: center;
+  margin-top: 100px;
+  color: #0b3767;
+
+}
+.product-title {
+  font-size: 1.2rem;
+}
+
+.product-description {
+  font-size: 0.9rem;
+}
+
+.remove-product {
+  transition: all 0.3s ease;
+}
+
+.remove-product:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.totals {
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+.no-border {
+  border: none;
+  box-shadow: none;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#trashicon{
+  color: #ff4d4d;
+
+}
+#trashicon:hover{
+  color: black;
+  font-size: 18px;
+}

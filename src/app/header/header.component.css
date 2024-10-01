@@ -1,0 +1,228 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #6A9C89; */
+    background-color:#FCFAEE ;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+  }
+  .hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    font-size: 28px;
+  }
+  
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  
+  .nav h1 {
+    color: black;
+    font-size: 34px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+  }
+  
+  .nav h1:hover {
+    color: #c5aa6a;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  
+  .nav .nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav ul li {
+    padding-left: 15px;
+  }
+  
+  .nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    padding-right: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .nav ul li a:hover {
+    color: #c5aa6a;
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  
+  .nav-search {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-input {
+    padding-left: 30px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .search-icon:hover {
+    cursor: pointer;
+  }
+  
+  .nav-search input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 30px;
+  }
+  
+  .nav-search button {
+    background-color: #c5aa6a;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .nav-search button:hover {
+    background-color: #10f3a3;
+  }
+  
+  main {
+    margin-top: 60px;
+  }
+  
+  .cart-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;  
+    right: -4px; 
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 1;
+  }
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .nav h1 {
+      font-size: 30px;
+      padding-left: 0;
+    }
+  
+    /* Hide the nav links on smaller screens */
+    .nav .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    /* Display the nav links when the menu is open */
+    .nav .nav-links.open {
+      display: flex;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .nav ul li {
+      padding-left: 0;
+      padding-bottom: 10px;
+    }
+  
+    .nav ul li a {
+      padding-right: 0;
+      font-size: 18px;
+    }
+  
+    /* Display the hamburger menu icon */
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-search {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .nav-search input {
+      width: 100%;
+    }
+  
+    .search-icon {
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav h1 {
+      font-size: 24px;
+    }
+  
+    .nav ul li a {
+      font-size: 16px;
+    }
+  
+    .nav-search input {
+      font-size: 14px;
+    }
+  }
+  
